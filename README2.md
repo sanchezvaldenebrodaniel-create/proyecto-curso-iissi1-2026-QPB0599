@@ -10,12 +10,18 @@
 ## 1. Introducción al problema
 
 Modelo Tradicional del Alquiler → El alquiler tradicional de coches siempre ha sido visto como un proceso tedioso y poco eficaz. Los clientes se han visto obligados a desplazarse hacia las oficinas para todo, adaptándose a los horarios de las mismas y enfrentándose a unos trámites en mostrador que a nadie le gustan.
+
 Complejidad de la gestión interna → Nuestra empresa se dedica al alquiler de coches de diversas gamas y para diferentes contextos. Sin embargo, ¿verdaderamente sabemos todo lo que conlleva gestionar este tipo de negocios? Más allá de la entrega de llaves, existe una compleja red de procesos: el control de disponibilidad, la asignación de vehículos según categorías, la gestión de seguros y extras, y la supervisión del estado de la flota (mantenimientos y niveles de combustible).
+
 Nuestra visión → Antes de adentrarnos en los detalles de la plataforma, es fundamental establecer nuestra seña de identidad: que el cliente pueda recoger su coche de manera rápida y eficaz, reduciendo los trámites al mínimo indispensable. Buscamos una digitalización real del sector.
+
 Problemas detectados en el sistema → Para lograr este objetivo, hemos detectado los siguientes problemas que nuestro sistema va a solucionar:
+
 Falta de autonomía online: El cliente no dispone de una página web centralizada donde pueda ver la disponibilidad, comparar precios, contratar extras o gestionar su alquiler desde casa.
+
 Horarios muy rígidos: Si un cliente necesita el coche un domingo o su vuelo llega de madrugada, no puede alquilarlo porque la oficina física está cerrada.
 Lío con los rayones y golpes: Apuntar a mano en un papel los daños que tiene el coche siempre trae problemas. A veces se le echa la culpa a un cliente que no fue, o la empresa pierde dinero por no haberlo anotado bien.
+
 Cobros y penalizaciones a mano: Si alguien devuelve el coche sin gasolina o cancela tarde, un empleado tiene que calcular la multa, buscar la reserva y cobrarla manualmente. El sistema actual no cruza los datos para aplicar esos recargos de forma automática.
 
 
