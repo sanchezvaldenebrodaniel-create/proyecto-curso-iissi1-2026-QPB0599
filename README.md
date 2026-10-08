@@ -75,23 +75,35 @@ Trabajador - Mecánico: Es un empleado con un rol técnico centrado en la logís
 ### 4.1. Requisitos funcionales
 
 RF - 001 Realizar una reserva
+
 Como: Cliente.
+
 Quiero: seleccionar un vehículo disponible en unas fechas y oficinas determinadas para confirmar su reserva.
+
 Para: asegurar un medio de transporte adaptado a mi viaje.
 
 RF - 002 Cancelar una reserva
+
 Como: Cliente.
+
 Quiero: cancelar una reserva a través de la aplicación.
+
 Para: anular el servicio si mis planes cambian sin tener que contactar por teléfono con la empresa.
 
 RF - 003 Cambiar el estado de un vehículo
+
 Como: Trabajador (Mecánico o Administrador).
+
 Quiero: actualizar el estado de un vehículo (por ejemplo, pasarlo de mantenimiento a "disponible").
+
 Para: que el sistema refleje la disponibilidad real del stock y los clientes puedan volver a reservarlo.
 
 RF - 004 Inicio de sesion 
+
 Como: Usuario
+
 Quiero: tener acceso a la aplicación y tener mis datos guardados 
+
 Para: poder acceder al sistema con el rol de Cliente y gestionar mis propias y/o futuras reservas.
 
 RF - 005 Búsqueda filtrada
