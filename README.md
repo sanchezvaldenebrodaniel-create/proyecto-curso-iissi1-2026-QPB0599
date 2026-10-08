@@ -107,90 +107,135 @@ Quiero: tener acceso a la aplicación y tener mis datos guardados
 Para: poder acceder al sistema con el rol de Cliente y gestionar mis propias y/o futuras reservas.
 
 RF - 005 Búsqueda filtrada
+
 Como: Cliente.
+
 Quiero: buscar vehículos filtrando por la categoría tipo Vehículo (económico, SUV, furgoneta, automático).
+
 Para: encontrar rápidamente el coche que mejor se ajuste a mis necesidades y preferencias de conducción.
 
 RF - 006 Añadir extras
+
 Como: Cliente.
+
 Quiero: añadir servicios adicionales (GPS, sillas de bebé o conductor adicional) durante el proceso de reserva.
+
 Para: adaptar el equipamiento del vehículo a las características específicas de mi viaje.
 
 RF - 007 Contratar seguro de la reserva
+
 Como: Cliente.
+
 Quiero: seleccionar un tipoSeguro (Básico o Premium) al formalizar mi alquiler.
+
 Para: elegir el tipo de seguro que mejor se adapte a mis condiciones.
 
-RF - 008 Registrar devolución y nivel de combustible
+RF - 008 Registrar devolución y nivel de combustible.
+
 Como: Trabajador (Administrador).
+
 Quiero: registrar el nivel de combustible final (combustible final) en el sistema cuando el cliente devuelve el vehículo en la oficina.
+
 Para: que el sistema compare este dato con el combustible inicial y calcule si debe aplicar automáticamente el cargo por repostaje.
 
-RF - 009 Aplicar penalización por cancelación tardía
+RF - 009 Aplicar penalización por cancelación tardía.
+
 Como: Administrador.
+
 Quiero: que el sistema detecte si una cancelación se realiza después de la fecha límite y aplique automáticamente una penalización del 20% sobre el precio de la reserva.
+
 Para: proteger los ingresos de la empresa frente a cancelaciones de última hora que dejan vehículos sin uso.
 
-RF - 010 Consultar vehículos pendientes de revisión
+RF - 010 Consultar vehículos pendientes de revisión.
+
 Como: Trabajador (Mecánico).
+
 Quiero: visualizar un listado de todos los vehículos cuyo estado actual sea en mantenimiento.
+
 Para: poder organizar mi jornada de trabajo, localizar los coches que necesitan reparaciones y prepararlos para que vuelvan a estar disponibles.
 
 #### 4.1.1. Requisitos de información
 
 RI - 001 Información sobre los clientes.
+
 Como: propietario de la empresa de alquiler de coches.
-Quiero: conocer la información correspondiente a los clientes (nombre, apellidos, carnet de conducir…)
+
+Quiero: conocer la información correspondiente a los clientes (nombre, apellidos, carnet de conducir…).
+
 Para: tener un control de los clientes que utilizan la aplicación.
 
 RI - 002 Información sobre los trabajadores.
+
 Como: propietario de la empresa de alquiler de coches.
+
 Quiero: disponer la información correspondiente a los trabajadores (id_trabajador, puesto, correo, nombre…).
+
 Para: controlar la organización y responsabilidades de la empresa.
 
 RI - 003 Información de la flota de vehículos.
+
 Como: propietario de la empresa de alquiler de coches.
+
 Quiero: tener un control sobre todo el stock de coches, junto a su información (matrícula, tipo de vehículo…), y el estado en el que se encuentran.
+
 Para: conocer el inventario exacto y la disponibilidad en tiempo real.
 
 RI 004 Información sobre las reservas.
+
 Como: propietario de la empresa de alquiler de coches.
-Quiero: saber los detalles de las reservas realizadas por los clientes (fecha de recogida, fecha de devolución, oficina de recogida…)
+
+Quiero: saber los detalles de las reservas realizadas por los clientes (fecha de recogida, fecha de devolución, oficina de recogida…).
+
 Para: tener un registro de cada alquiler y gestionar las entregas.
 
 RI - 005 Información sobre los cobros.
+
 Como: propietario de la empresa de alquiler de coches.
+
 Quiero: controlar que los pagos se hayan realizado antes de la recogida del vehículo.
+
 Para: realizar un seguimiento sobre los cobros.
 
 RI - 006 Información sobre las penalizaciones.
+
 Como: propietario de la empresa de alquiler de coches.
+
 Quiero: disponer de la información sobre las penalizaciones ( motivo, coste, …).
+
 Para: asegurar el cobro de esas penalizaciones.
 
 RI - 007 Información sobre ofertas y promociones.
+
 Como:  propietario de la empresa de alquiler de coches.
+
 Quiero: disponer de la información correspondiente a las promociones: código promocional, descripción, porcentaje de descuento, fecha de inicio y fecha de caducidad.
+
 Para: disponer del catálogo de ofertas y fidelizar clientes.
 
 #### 4.1.2. Reglas de negocio
 
 RN - 001 Restricción de disponibilidad.
+
 Un vehículo no puede ser reservado, si su estado actual es en mantenimiento o si ya está alquilado por otro cliente.
 
 RN - 002 Restricción de fecha.
+
 Un vehículo no puede ser devuelto más tarde de la fecha de devolución pactada en la reserva.
 
 RN - 003 Penalización de combustible.
+
 Si un cliente entrega el coche con menos combustible que la cantidad de combustible inicial, se aplicará automáticamente un cargo adicional
 
 RN - 004 Penalización de cancelación.
+
 Si el sistema detecta que la cancelación de la reserva ha sido realizada posteriormente a la fecha límite, se aplicará un cargo adicional automáticamente.
 
 RN - 005 Obligatoriedad de contratación de seguro.
+
 Ninguna reserva podrá ser finalizada sin haber seleccionado uno de los dos tipos de seguros. 
 
 RN - 006 Restricción de antigüedad de carnet.
+
 Los clientes deben tener una antigüedad mínima de carnet de un año  para poder conducir el vehículo .
 
 ### 4.2. Mapa de historias de usuario (opcional)
