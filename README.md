@@ -239,6 +239,16 @@ RN - 006 Restricción de antigüedad de carnet.
 Los clientes deben tener una antigüedad mínima de carnet de un año  para poder conducir el vehículo.
 
 ### 4.2. Mapa de historias de usuario (opcional)
+### Mapas de historias de usuario
+
+| R.G.01. Gestión de Usuarios | R.G.02. Gestión de Flota | R.G.03. Gestión de Reservas | R.G.04. Gestión de Extras y Facturación |
+|---|---|---|---|
+| **RF-004**<br><br>Inicio de sesión | **RF-005**<br><br>Búsqueda filtrada | **RF-001**<br><br>Realizar una reserva | **RF-006**<br><br>Añadir extras |
+| | **RF-003**<br><br>Cambiar el estado de un vehículo | **RF-002**<br><br>Cancelar una reserva | **RF-007**<br><br>Contratar seguro de la reserva |
+| | **RF-010**<br><br>Consultar vehículos pendientes de revisión | **RF-008**<br><br>Registrar devolución y nivel de combustible | **RF-009**<br><br>Aplicar penalización por cancelación tardía |
+| **RI-001**<br><br>Info. Clientes | **RI-003**<br><br>Info. Flota de vehículos | **RI-004**<br><br>Info. Reservas | **RI-005**<br><br>Info. Cobros |
+| **RI-002**<br><br>Info. Trabajadores | | | **RI-006**<br><br>Info. Penalizaciones |
+| | | | **RI-007**<br><br>Ofertas y promociones |
 
 ### 4.3. Requisitos no funcionales (opcional)
 
