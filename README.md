@@ -21,7 +21,7 @@ Falta de autonomía online: El cliente no dispone de una página web centralizad
 
 Horarios muy rígidos: Si un cliente necesita el coche un domingo o su vuelo llega de madrugada, no puede alquilarlo porque la oficina física está cerrada.
 
-Lío con los rayones y golpes: Apuntar a mano en un papel los daños que tiene el coche siempre trae problemas. A veces se le echa la culpa a un cliente que no fue, o la empresa pierde dinero por no haberlo anotado bien.
+Gestión de incidencias: Apuntar a mano en un papel los daños que tiene el coche siempre trae problemas. A veces se le echa la culpa a un cliente que no fue, o la empresa pierde dinero por no haberlo anotado bien.
 
 Cobros y penalizaciones a mano: Si alguien devuelve el coche sin gasolina o cancela tarde, un empleado tiene que calcular la multa, buscar la reserva y cobrarla manualmente. El sistema actual no cruza los datos para aplicar esos recargos de forma automática.
 
