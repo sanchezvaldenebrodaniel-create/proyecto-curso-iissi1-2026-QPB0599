@@ -74,7 +74,7 @@ Trabajador - Mecánico: Es un empleado con un rol técnico centrado en la logís
 
 ### 4.1. Requisitos funcionales
 
-RF - 001 Realizar una reserva
+- RF - 001 Realizar una reserva
 
 Como: Cliente.
 
@@ -82,7 +82,7 @@ Quiero: seleccionar un vehículo disponible en unas fechas y oficinas determinad
 
 Para: asegurar un medio de transporte adaptado a mi viaje.
 
-RF - 002 Cancelar una reserva
+- RF - 002 Cancelar una reserva
 
 Como: Cliente.
 
@@ -90,7 +90,7 @@ Quiero: cancelar una reserva a través de la aplicación.
 
 Para: anular el servicio si mis planes cambian sin tener que contactar por teléfono con la empresa.
 
-RF - 003 Cambiar el estado de un vehículo
+- RF - 003 Cambiar el estado de un vehículo
 
 Como: Trabajador (Mecánico o Administrador).
 
@@ -98,7 +98,7 @@ Quiero: actualizar el estado de un vehículo (por ejemplo, pasarlo de mantenimie
 
 Para: que el sistema refleje la disponibilidad real del stock y los clientes puedan volver a reservarlo.
 
-RF - 004 Inicio de sesion 
+- RF - 004 Inicio de sesion 
 
 Como: Usuario
 
@@ -106,7 +106,7 @@ Quiero: tener acceso a la aplicación y tener mis datos guardados
 
 Para: poder acceder al sistema con el rol de Cliente y gestionar mis propias y/o futuras reservas.
 
-RF - 005 Búsqueda filtrada
+- RF - 005 Búsqueda filtrada
 
 Como: Cliente.
 
@@ -114,7 +114,7 @@ Quiero: buscar vehículos filtrando por la categoría tipo Vehículo (económico
 
 Para: encontrar rápidamente el coche que mejor se ajuste a mis necesidades y preferencias de conducción.
 
-RF - 006 Añadir extras
+- RF - 006 Añadir extras
 
 Como: Cliente.
 
@@ -122,7 +122,7 @@ Quiero: añadir servicios adicionales (GPS, sillas de bebé o conductor adiciona
 
 Para: adaptar el equipamiento del vehículo a las características específicas de mi viaje.
 
-RF - 007 Contratar seguro de la reserva
+- RF - 007 Contratar seguro de la reserva
 
 Como: Cliente.
 
@@ -130,7 +130,7 @@ Quiero: seleccionar un tipoSeguro (Básico o Premium) al formalizar mi alquiler.
 
 Para: elegir el tipo de seguro que mejor se adapte a mis condiciones.
 
-RF - 008 Registrar devolución y nivel de combustible.
+- RF - 008 Registrar devolución y nivel de combustible.
 
 Como: Trabajador (Administrador).
 
@@ -138,7 +138,7 @@ Quiero: registrar el nivel de combustible final (combustible final) en el sistem
 
 Para: que el sistema compare este dato con el combustible inicial y calcule si debe aplicar automáticamente el cargo por repostaje.
 
-RF - 009 Aplicar penalización por cancelación tardía.
+- RF - 009 Aplicar penalización por cancelación tardía.
 
 Como: Administrador.
 
@@ -146,7 +146,7 @@ Quiero: que el sistema detecte si una cancelación se realiza después de la fec
 
 Para: proteger los ingresos de la empresa frente a cancelaciones de última hora que dejan vehículos sin uso.
 
-RF - 010 Consultar vehículos pendientes de revisión.
+- RF - 010 Consultar vehículos pendientes de revisión.
 
 Como: Trabajador (Mecánico).
 
@@ -156,7 +156,7 @@ Para: poder organizar mi jornada de trabajo, localizar los coches que necesitan 
 
 #### 4.1.1. Requisitos de información
 
-RI - 001 Información sobre los clientes.
+- RI - 001 Información sobre los clientes.
 
 Como: propietario de la empresa de alquiler de coches.
 
@@ -164,7 +164,7 @@ Quiero: conocer la información correspondiente a los clientes (nombre, apellido
 
 Para: tener un control de los clientes que utilizan la aplicación.
 
-RI - 002 Información sobre los trabajadores.
+- RI - 002 Información sobre los trabajadores.
 
 Como: propietario de la empresa de alquiler de coches.
 
@@ -172,7 +172,7 @@ Quiero: disponer la información correspondiente a los trabajadores (id_trabajad
 
 Para: controlar la organización y responsabilidades de la empresa.
 
-RI - 003 Información de la flota de vehículos.
+- RI - 003 Información de la flota de vehículos.
 
 Como: propietario de la empresa de alquiler de coches.
 
@@ -180,7 +180,7 @@ Quiero: tener un control sobre todo el stock de coches, junto a su información 
 
 Para: conocer el inventario exacto y la disponibilidad en tiempo real.
 
-RI 004 Información sobre las reservas.
+- RI 004 Información sobre las reservas.
 
 Como: propietario de la empresa de alquiler de coches.
 
@@ -188,7 +188,7 @@ Quiero: saber los detalles de las reservas realizadas por los clientes (fecha de
 
 Para: tener un registro de cada alquiler y gestionar las entregas.
 
-RI - 005 Información sobre los cobros.
+- RI - 005 Información sobre los cobros.
 
 Como: propietario de la empresa de alquiler de coches.
 
@@ -196,7 +196,7 @@ Quiero: controlar que los pagos se hayan realizado antes de la recogida del veh�
 
 Para: realizar un seguimiento sobre los cobros.
 
-RI - 006 Información sobre las penalizaciones.
+- RI - 006 Información sobre las penalizaciones.
 
 Como: propietario de la empresa de alquiler de coches.
 
@@ -204,7 +204,7 @@ Quiero: disponer de la información sobre las penalizaciones ( motivo, coste, �
 
 Para: asegurar el cobro de esas penalizaciones.
 
-RI - 007 Información sobre ofertas y promociones.
+- RI - 007 Información sobre ofertas y promociones.
 
 Como:  propietario de la empresa de alquiler de coches.
 
@@ -214,33 +214,33 @@ Para: disponer del catálogo de ofertas y fidelizar clientes.
 
 #### 4.1.2. Reglas de negocio
 
-RN - 001 Restricción de disponibilidad.
+- RN - 001 Restricción de disponibilidad.
 
 Un vehículo no puede ser reservado, si su estado actual es en mantenimiento o si ya está alquilado por otro cliente.
 
-RN - 002 Restricción de fecha.
+- RN - 002 Restricción de fecha.
 
 Un vehículo no puede ser devuelto más tarde de la fecha de devolución pactada en la reserva.
 
-RN - 003 Penalización de combustible.
+- RN - 003 Penalización de combustible.
 
 Si un cliente entrega el coche con menos combustible que la cantidad de combustible inicial, se aplicará automáticamente un cargo adicional
 
-RN - 004 Penalización de cancelación.
+- RN - 004 Penalización de cancelación.
 
 Si el sistema detecta que la cancelación de la reserva ha sido realizada posteriormente a la fecha límite, se aplicará un cargo adicional automáticamente.
 
-RN - 005 Obligatoriedad de contratación de seguro.
+- RN - 005 Obligatoriedad de contratación de seguro.
 
 Ninguna reserva podrá ser finalizada sin haber seleccionado uno de los dos tipos de seguros. 
 
-RN - 006 Restricción de antigüedad de carnet.
+- RN - 006 Restricción de antigüedad de carnet.
 
 Los clientes deben tener una antigüedad mínima de carnet de un año  para poder conducir el vehículo.
 
-### 4.1.3. Pruebas de aceptación.
+#### 4.1.3. Pruebas de aceptación.
 
-RN-001 Antigüedad mínima del carnet de conducir - Pruebas de aceptación
+- RN-001 Antigüedad mínima del carnet de conducir - Pruebas de aceptación
 
 La reserva se confirma con éxito si la fecha de expedición del carnet del cliente supera el año de antigüedad respecto a la fecha de recogida.
 
@@ -248,7 +248,7 @@ La reserva no se crea si el carnet del cliente tiene menos de 1 año de antigüe
 
 El cliente no se puede seleccionar ni registrar para la reserva si falta el dato de la fecha de expedición del carnet.
 
-RN-002 Control de disponibilidad de vehículo por estado y fechas - Pruebas de aceptación
+- RN-002 Control de disponibilidad de vehículo por estado y fechas - Pruebas de aceptación
 
 El vehículo se asigna a la reserva si su estado es Disponible y no presenta solapamiento de fechas con ninguna reserva confirmada.
 
@@ -256,19 +256,19 @@ El vehículo no se puede reservar si su estado actual es de mantenimiento o alqu
  
 El vehículo no se puede reservar si coincide total o parcialmente en fechas con otra reserva activa para la misma matrícula.
 
-RN-003 Penalización por devolución tardía - Pruebas de aceptación
+- RN-003 Penalización por devolución tardía - Pruebas de aceptación
 
 Si al procesar el check-out la hora real de devolución es menor o igual a la fecha/hora límite acordada, la reserva se cierra sin recargos por demora.
 
 Si la hora real de devolución supera la hora límite pactada (t > límite), el sistema calcula y suma automáticamente un recargo del 20% del precio diario del coche por cada fracción de retraso.
 
-RN-004 Cargo adicional por diferencia de combustible - Pruebas de aceptación.
+- RN-004 Cargo adicional por diferencia de combustible - Pruebas de aceptación.
 
 Si al registrar la devolución el nivel combustible final es igual o mayor que combustible inicial, no se aplica ningún cargo de combustible.
  
 Si el nivel combustible final es estrictamente menor que combustible inicial, el sistema calcula y añade un recargo por repostaje al importe final del alquiler. 
 
-RN-005 Incompatibilidad de reserva por estado de mantenimiento - Pruebas de aceptación
+- RN-005 Incompatibilidad de reserva por estado de mantenimiento - Pruebas de aceptación
 
 Si un trabajador o mecánico cambia el estado de un coche a Mantenimiento, el vehículo deja de aparecer automáticamente en los resultados de búsqueda de coches disponibles.
 
