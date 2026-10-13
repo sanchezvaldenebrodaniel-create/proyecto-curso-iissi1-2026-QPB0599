@@ -238,6 +238,42 @@ RN - 006 Restricción de antigüedad de carnet.
 
 Los clientes deben tener una antigüedad mínima de carnet de un año  para poder conducir el vehículo.
 
+### 4.1.3. Pruebas de aceptación.
+
+RN-001 Antigüedad mínima del carnet de conducir - Pruebas de aceptación
+
+La reserva se confirma con éxito si la fecha de expedición del carnet del cliente supera el año de antigüedad respecto a la fecha de recogida.
+
+La reserva no se crea si el carnet del cliente tiene menos de 1 año de antigüedad respecto a la fecha de recogida.
+
+El cliente no se puede seleccionar ni registrar para la reserva si falta el dato de la fecha de expedición del carnet.
+
+RN-002 Control de disponibilidad de vehículo por estado y fechas - Pruebas de aceptación
+
+El vehículo se asigna a la reserva si su estado es Disponible y no presenta solapamiento de fechas con ninguna reserva confirmada.
+
+El vehículo no se puede reservar si su estado actual es de mantenimiento o alquilado.
+ 
+El vehículo no se puede reservar si coincide total o parcialmente en fechas con otra reserva activa para la misma matrícula.
+
+RN-003 Penalización por devolución tardía - Pruebas de aceptación
+
+Si al procesar el check-out la hora real de devolución es menor o igual a la fecha/hora límite acordada, la reserva se cierra sin recargos por demora.
+
+Si la hora real de devolución supera la hora límite pactada (t > límite), el sistema calcula y suma automáticamente un recargo del 20% del precio diario del coche por cada fracción de retraso.
+
+RN-004 Cargo adicional por diferencia de combustible - Pruebas de aceptación.
+
+Si al registrar la devolución el nivel combustible final es igual o mayor que combustible inicial, no se aplica ningún cargo de combustible.
+ 
+Si el nivel combustible final es estrictamente menor que combustible inicial, el sistema calcula y añade un recargo por repostaje al importe final del alquiler. 
+
+RN-005 Incompatibilidad de reserva por estado de mantenimiento - Pruebas de aceptación
+
+Si un trabajador o mecánico cambia el estado de un coche a Mantenimiento, el vehículo deja de aparecer automáticamente en los resultados de búsqueda de coches disponibles.
+
+Cuando un mecánico restaura el estado del coche a Disponible, el vehículo vuelve a estar elegible en el catálogo para nuevas reservas.
+
 ### 4.2. Mapa de historias de usuario (opcional)
 ### Mapas de historias de usuario
 
