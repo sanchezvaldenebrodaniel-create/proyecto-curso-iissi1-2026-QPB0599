@@ -1,13 +1,13 @@
 # Alquiler de coches.
 
-## Miembros del grupo L8-AM-5 (sustituir)
+## Miembros del grupo L8-AM-5 (sustituir).
 
-1. Parro Muruve, Pablo
-1. Fuentes Cuesta, José Joaquín
-1. Sánchez Valdenebro, Daniel
-1. Ridruejo Dorado, Nicolas
+1. Parro Muruve, Pablo.
+1. Fuentes Cuesta, José Joaquín.
+1. Sánchez Valdenebro, Daniel.
+1. Ridruejo Dorado, Nicolas.
 
-## 1. Introducción al problema
+## 1. Introducción al problema.
 
 Modelo Tradicional del Alquiler → El alquiler tradicional de coches siempre ha sido visto como un proceso tedioso y poco eficaz. Los clientes se han visto obligados a desplazarse hacia las oficinas para todo, adaptándose a los horarios de las mismas y enfrentándose a unos trámites en mostrador que a nadie le gustan.
 
@@ -47,9 +47,9 @@ Combustible inicial → Cantidad de combustible que el coche posee cuando lo rec
 
 Combustible final → Cantidad de combustible que el coche tiene cuando el cliente lo deja en la oficina.
 
-## 3. Visión general del sistema
+## 3. Visión general del sistema.
 
-### 3.1. Requisitos generales
+### 3.1. Requisitos generales.
 
 Requisitos generales → 
 
@@ -70,11 +70,11 @@ Trabajador - Administrador: Es un empleado con rol de gestión y supervisor, ide
 
 Trabajador - Mecánico: Es un empleado con un rol técnico centrado en la logística de la flota. Su función en el sistema está restringida y tan solo se limita a los temas técnicos de los vehículos. Principalmente, consulta qué coches requieren asistencia y actualiza su estado en la plataforma (por ejemplo, pasándolos del estado "en mantenimiento." a "disponible" para que el sistema permita que vuelvan a ser reservados por los clientes).
 
-## 4. Catálogo de requisitos
+## 4. Catálogo de requisitos.
 
-### 4.1. Requisitos funcionales
+### 4.1. Requisitos funcionales.
 
-- RF - 001 Realizar una reserva
+- RF - 001 Realizar una reserva.
 
 Como: Cliente.
 
@@ -82,7 +82,7 @@ Quiero: seleccionar un vehículo disponible en unas fechas y oficinas determinad
 
 Para: asegurar un medio de transporte adaptado a mi viaje.
 
-- RF - 002 Cancelar una reserva
+- RF - 002 Cancelar una reserva.
 
 Como: Cliente.
 
@@ -90,7 +90,7 @@ Quiero: cancelar una reserva a través de la aplicación.
 
 Para: anular el servicio si mis planes cambian sin tener que contactar por teléfono con la empresa.
 
-- RF - 003 Cambiar el estado de un vehículo
+- RF - 003 Cambiar el estado de un vehículo.
 
 Como: Trabajador (Mecánico o Administrador).
 
@@ -98,15 +98,15 @@ Quiero: actualizar el estado de un vehículo (por ejemplo, pasarlo de mantenimie
 
 Para: que el sistema refleje la disponibilidad real del stock y los clientes puedan volver a reservarlo.
 
-- RF - 004 Inicio de sesion 
+- RF - 004 Inicio de sesion. 
 
-Como: Usuario
+Como: Usuario.
 
-Quiero: tener acceso a la aplicación y tener mis datos guardados 
+Quiero: tener acceso a la aplicación y tener mis datos guardados.
 
 Para: poder acceder al sistema con el rol de Cliente y gestionar mis propias y/o futuras reservas.
 
-- RF - 005 Búsqueda filtrada
+- RF - 005 Búsqueda filtrada.
 
 Como: Cliente.
 
@@ -114,7 +114,7 @@ Quiero: buscar vehículos filtrando por la categoría tipo Vehículo (económico
 
 Para: encontrar rápidamente el coche que mejor se ajuste a mis necesidades y preferencias de conducción.
 
-- RF - 006 Añadir extras
+- RF - 006 Añadir extras.
 
 Como: Cliente.
 
@@ -122,7 +122,7 @@ Quiero: añadir servicios adicionales (GPS, sillas de bebé o conductor adiciona
 
 Para: adaptar el equipamiento del vehículo a las características específicas de mi viaje.
 
-- RF - 007 Contratar seguro de la reserva
+- RF - 007 Contratar seguro de la reserva.
 
 Como: Cliente.
 
@@ -154,7 +154,7 @@ Quiero: visualizar un listado de todos los vehículos cuyo estado actual sea en 
 
 Para: poder organizar mi jornada de trabajo, localizar los coches que necesitan reparaciones y prepararlos para que vuelvan a estar disponibles.
 
-#### 4.1.1. Requisitos de información
+#### 4.1.1. Requisitos de información.
 
 - RI - 001 Información sobre los clientes.
 
@@ -240,7 +240,7 @@ Los clientes deben tener una antigüedad mínima de carnet de un año  para pode
 
 #### 4.1.3. Pruebas de aceptación.
 
-- RN-001 Antigüedad mínima del carnet de conducir - Pruebas de aceptación
+- RN-001 Antigüedad mínima del carnet de conducir - Pruebas de aceptación.
 
 La reserva se confirma con éxito si la fecha de expedición del carnet del cliente supera el año de antigüedad respecto a la fecha de recogida.
 
@@ -248,7 +248,7 @@ La reserva no se crea si el carnet del cliente tiene menos de 1 año de antigüe
 
 El cliente no se puede seleccionar ni registrar para la reserva si falta el dato de la fecha de expedición del carnet.
 
-- RN-002 Control de disponibilidad de vehículo por estado y fechas - Pruebas de aceptación
+- RN-002 Control de disponibilidad de vehículo por estado y fechas - Pruebas de aceptación.
 
 El vehículo se asigna a la reserva si su estado es Disponible y no presenta solapamiento de fechas con ninguna reserva confirmada.
 
@@ -256,7 +256,7 @@ El vehículo no se puede reservar si su estado actual es de mantenimiento o alqu
  
 El vehículo no se puede reservar si coincide total o parcialmente en fechas con otra reserva activa para la misma matrícula.
 
-- RN-003 Penalización por devolución tardía - Pruebas de aceptación
+- RN-003 Penalización por devolución tardía - Pruebas de aceptación.
 
 Si al procesar el check-out la hora real de devolución es menor o igual a la fecha/hora límite acordada, la reserva se cierra sin recargos por demora.
 
@@ -268,14 +268,14 @@ Si al registrar la devolución el nivel combustible final es igual o mayor que c
  
 Si el nivel combustible final es estrictamente menor que combustible inicial, el sistema calcula y añade un recargo por repostaje al importe final del alquiler. 
 
-- RN-005 Incompatibilidad de reserva por estado de mantenimiento - Pruebas de aceptación
+- RN-005 Incompatibilidad de reserva por estado de mantenimiento - Pruebas de aceptación.
 
 Si un trabajador o mecánico cambia el estado de un coche a Mantenimiento, el vehículo deja de aparecer automáticamente en los resultados de búsqueda de coches disponibles.
 
 Cuando un mecánico restaura el estado del coche a Disponible, el vehículo vuelve a estar elegible en el catálogo para nuevas reservas.
 
-### 4.2. Mapa de historias de usuario (opcional)
-### Mapas de historias de usuario
+### 4.2. Mapa de historias de usuario (opcional).
+### Mapas de historias de usuario.
 
 | R.G.01. Gestión de Usuarios | R.G.02. Gestión de Flota | R.G.03. Gestión de Reservas | R.G.04. Gestión de Extras y Facturación |
 |---|---|---|---|
@@ -286,9 +286,9 @@ Cuando un mecánico restaura el estado del coche a Disponible, el vehículo vuel
 | **RI-002**<br><br>Info. Trabajadores | | | **RI-006**<br><br>Info. Penalizaciones |
 | | | | **RI-007**<br><br>Ofertas y promociones |
 
-### 4.3. Requisitos no funcionales (opcional)
+### 4.3. Requisitos no funcionales (opcional).
 
-RNF - 001 Cifrado de credenciales
+- RNF - 001 Cifrado de credenciales.
 
 Como: propietario de la empresa de alquiler de coches.
 
@@ -296,15 +296,15 @@ Quiero: que las credenciales de acceso (correo y contraseña) y los datos person
 
 Para: garantizar la seguridad de la cuentas y la privacidad.
 
-RNF - 002 Control de acceso por perfil
+- RNF - 002 Control de acceso por perfil.
 
 Como: propietario de la empresa de alquiler de coches.
 
-Quiero: que el sistema restrinja las opciones disponibles según el tipo de trabajador
+Quiero: que el sistema restrinja las opciones disponibles según el tipo de trabajador.
 
 Para: evitar que un perfil técnico pueda modificar la facturación, los precios o las cuentas de usuario
 
-RNF - 003 Rendimiento de búsqueda.
+- RNF - 003 Rendimiento de búsqueda.
 
 Como: cliente
 
@@ -312,7 +312,7 @@ Quiero: que la búsqueda filtrada de vehículos devuelva los resultados en un ti
 
 Para: agilizar la navegación y poder realizar la reserva sin esperar prolongadas.
 
-RNF- 004 Adaptabilidad e interfaz.
+- RNF- 004 Adaptabilidad e interfaz.
 
 Como: cliente 
 
@@ -320,7 +320,7 @@ Quiero: poder acceder y gestionar mis reservas desde cualquier dispositivo.
 
 Para: consultar la información de mi alquiler cómodamente y en cualquier momento.
 
-RNF - 005 Disponibilidad continua del servicio.
+- RNF - 005 Disponibilidad continua del servicio.
 
 Como: cliente.
 
