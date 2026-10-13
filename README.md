@@ -242,10 +242,46 @@ Los clientes deben tener una antigüedad mínima de carnet de un año  para pode
 
 ### 4.3. Requisitos no funcionales (opcional)
 
-**R.N.F. 01. Título requisito no funcional**
-Como [tipo de usuario]
-quiero [servicio]
-para [razón]
+RNF - 001 Cifrado de credenciales
+
+Como: propietario de la empresa de alquiler de coches.
+
+Quiero: que las credenciales de acceso (correo y contraseña) y los datos personales se almacenen de forma cifrada en el sistema.
+
+Para: garantizar la seguridad de la cuentas y la privacidad.
+
+RNF - 002 Control de acceso por perfil
+
+Como: propietario de la empresa de alquiler de coches.
+
+Quiero: que el sistema restrinja las opciones disponibles según el tipo de trabajador
+
+Para: evitar que un perfil técnico pueda modificar la facturación, los precios o las cuentas de usuario
+
+RNF - 003 Rendimiento de búsqueda.
+
+Como: cliente
+
+Quiero: que la búsqueda filtrada de vehículos devuelva los resultados en un tiempo inferior a 2 segundos.
+
+Para: agilizar la navegación y poder realizar la reserva sin esperar prolongadas.
+
+RNF- 004 Adaptabilidad e interfaz.
+
+Como: cliente 
+
+Quiero: poder acceder y gestionar mis reservas desde cualquier dispositivo.
+
+Para: consultar la información de mi alquiler cómodamente y en cualquier momento.
+
+RNF - 005 Disponibilidad continua del servicio.
+
+Como: cliente.
+
+Quiero: que la plataforma web esté accesible el 99.9% del tiempo.
+
+Para: consultar la disponibilidad o formalizar alquileres de forma autónoma sin depender de los horarios comerciales de las oficinas físicas.
+
 
 -- fin entregable 1 --
 
