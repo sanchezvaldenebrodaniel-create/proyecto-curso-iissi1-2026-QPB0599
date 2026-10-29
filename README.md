@@ -160,7 +160,7 @@ Para: poder organizar mi jornada de trabajo, localizar los coches que necesitan 
 
 Como: propietario de la empresa de alquiler de coches.
 
-Quiero: conocer la información correspondiente a los clientes (nombre, apellidos, carnet de conducir…).
+Quiero: conocer la información correspondiente a los clientes (dni,teléfono,nombre,correo,contraseña,fecha carnet).
 
 Para: tener un control de los clientes que utilizan la aplicación.
 
@@ -168,7 +168,7 @@ Para: tener un control de los clientes que utilizan la aplicación.
 
 Como: propietario de la empresa de alquiler de coches.
 
-Quiero: disponer la información correspondiente a los trabajadores (id_trabajador, puesto, correo, nombre…).
+Quiero: disponer la información correspondiente a los trabajadores (nombre,correo,contraseña,id_trabajador).
 
 Para: controlar la organización y responsabilidades de la empresa.
 
@@ -176,7 +176,7 @@ Para: controlar la organización y responsabilidades de la empresa.
 
 Como: propietario de la empresa de alquiler de coches.
 
-Quiero: tener un control sobre todo el stock de coches, junto a su información (matrícula, tipo de vehículo…), y el estado en el que se encuentran.
+Quiero: tener un control sobre todo el stock de coches, junto a su información (matrícula, tipo de vehículo, precio, estado, modelo)
 
 Para: conocer el inventario exacto y la disponibilidad en tiempo real.
 
@@ -184,7 +184,7 @@ Para: conocer el inventario exacto y la disponibilidad en tiempo real.
 
 Como: propietario de la empresa de alquiler de coches.
 
-Quiero: saber los detalles de las reservas realizadas por los clientes (fecha de recogida, fecha de devolución, oficina de recogida…).
+Quiero: saber los detalles de las reservas realizadas por los clientes (fecha de recogida, fecha de devolución, combustible inicial, combustible final).
 
 Para: tener un registro de cada alquiler y gestionar las entregas.
 
@@ -200,7 +200,7 @@ Para: realizar un seguimiento sobre los cobros.
 
 Como: propietario de la empresa de alquiler de coches.
 
-Quiero: disponer de la información sobre las penalizaciones ( motivo, coste, …).
+Quiero: disponer de la información sobre las penalizaciones (motivo, coste).
 
 Para: asegurar el cobro de esas penalizaciones.
 
