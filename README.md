@@ -340,21 +340,37 @@ Para: consultar la disponibilidad o formalizar alquileres de forma autónoma sin
 
 ### 5.2. Escenarios de prueba
 
-- con descripción textual y diagrama de objetos UML.
+Un cliente cuyo nombre es Juan Pérez, su correo es juanperez@gmail.com (instancia de la subclase Cliente) efectúa la reserva de un vehículo de categoría SUV (Toyota RAV4, cuya matrícula es 9223 LMN y su estado era perfecto) la reserva la realizó para recoger el coche y devolverlo en la oficina central de Sevilla para el periodo comprendido entre el 10/11/2026 y el 15/11/2026.
+En la contratación, el cliente elige la modalidad de Seguro Básico (cumpliendo la restricción que exige al menos un seguro activo) y añade la opción extra de GPS. Contando con esta reserva es la quinta que realiza, entonces el sistema aplica automáticamente el descuento de oferta por fidelidad.
+Con estos datos se emite la Factura correspondiente. Una vez devuelto el vehículo al finalizar el contrato, el mecánico registra la Revisión lo que es obligatorio para verificar el estado del automóvil y el nivel de combustible final y compararlo con el inicial, que había antes que el cliente cogiese el coche, antes de poder habilitarlo para un nuevo cliente.
+Cuando se realizó la revisión el vehículo llegó en peor estado del original, es por ello que tras la revisión mecánica, se le asignó la factura correspondiente a su tipo de seguro. Por otro lado, el nivel de gasolina era notablemente inferior al de la entrega del vehículo. Por ello se aplicó  también una factura correspondiente a eso
+
 
 ## 6. Matrices de trazabilidad
 
 - Matriz de trazabilidad entre los elementos del modelo conceptual y los requisitos.
 
-|       | EntidadX   | AsociaciónX  | RestricciónX  | Entidad2 ...   | 
-|:------|:-----------|:-----------|:-----------|:-----------|
-| RI-1  | X          | X          | X          | X          |
-| RI-2  |            | X          |            | X          |
-| RF-1  |            | X          |            | X          |
-| RF-2  | X          |            | X          | X          |
-| RN-1  |            | X          |            |            |
-| RN-2  | X          | X          | X          |            |
-| ...   |            |            |            |            |
+Aquí tienes la tabla en formato Markdown para que puedas copiarla y pegarla fácilmente:
+
+| Requisito Funcional (RF) | Requisito General (RG) | Usuario / Rol | Requisitos de Información (RI) | Reglas de Negocio (RN) |
+| --- | --- | --- | --- | --- |
+| **RF - 001** Realizar una reserva | RG-01 | Cliente | RI-001, RI-003, RI-004, RI-005 | RN-001, RN-005, RN-006 |
+| **RF - 002** Cancelar una reserva | RG-01, RG-04 | Cliente | RI-004, RI-005, RI-006 | RN-004 |
+| **RF - 003** Cambiar el estado de un vehículo | RG-02 | Trabajador - Mecánico / Administrador | RI-003 | RN-001 |
+| **RF - 004** Inicio de sesión | RG-01 | Usuario (Cliente / Trabajador) | RI-001, RI-002 | — |
+| **RF - 005** Búsqueda filtrada | RG-01 | Cliente | RI-003 | RN-001 |
+| **RF - 006** Añadir extras | RG-01 | Cliente | RI-004 | — |
+| **RF - 007** Contratar seguro de la reserva | RG-01 | Cliente | RI-004 | RN-005 |
+| **RF - 008** Registrar devolución y nivel de combustible | RG-03, RG-04 | Trabajador - Administrador | RI-003, RI-004, RI-005, RI-006 | RN-002, RN-003 |
+| **RF - 009** Aplicar penalización por cancelación tardía | RG-04 | Trabajador - Administrador | RI-004, RI-005, RI-006 | RN-004 |
+| **RF - 010** Consultar vehículos pendientes de revisión | RG-02 | Trabajador - Mecánico | RI-003 | RN-001 |
+| **RF - 011** Consultar historial de reservas de un cliente | RG-01 | Cliente | RI-001, RI-004 | — |
+| **RF - 012** Consultar reservas activas del día | RG-02, RG-03 | Trabajador - Administrador | RI-004 | — |
+| **RF - 013** Consultar los vehículos más alquilados | RG-02 | Trabajador - Administrador | RI-003, RI-004 | — |
+| **RF - 014** Consultar listado de penalizaciones de un cliente | RG-04 | Trabajador - Administrador | RI-001, RI-005, RI-006 | RN-003, RN-004 |
+| **RF - 015** Consultar los clientes con mayor fidelidad | RG-01, RG-02 | Trabajador - Administrador | RI-001, RI-004 | — |
+| **RF - 016** Ingresos totales mensuales | RG-04 | Trabajador - Administrador | RI-005, RI-006 | — |
+| **RF - 017** Extras más demandados | RG-02 | Trabajador - Administrador | RI-004 | — |
 
 -- fin entregable 2 --
 
@@ -372,20 +388,6 @@ Para: consultar la disponibilidad o formalizar alquileres de forma autónoma sin
 - Restricciones sobre el MC / Elementos del modelo tecnológico (SQL) (Triggers, checks, etc.)
 - Incluir Reglas de negocio — Constraints/Triggers en las matrices de trazabilidad para el entregable 3
 
-|       | EntidadX   | AsociaciónX  | RestricciónX  | Entidad2 ...   | 
-|:-------|:-------|:-------|:-------|:-------|
-| TABLA-1 |        |        |        |        |
-| TABLA-2 |        |        |        |        |
-| TABLA-3 |        |        |        |        |
-| TABLA-4 |        |        |        |        |
-| TRIG-1 |        |        |        |        |
-| TRIG-2 | X      | X      |        | X      |
-| TRIG-3 |        | X      |        | X      |
-| TRIG-4 |        |        | X      |        |
-| CONST-1 |        |        |        |        |
-| CONST-2 | X      | X      |        | X      |
-| CONST-3 |        | X      |        | X      |
-| CONST-4 |        |        | X      |        |
 
 Se consideran todo tipo de constraints declarativas (aquellas definidas durante el CREATE TABLE).
 -- fin entregable 3 --
