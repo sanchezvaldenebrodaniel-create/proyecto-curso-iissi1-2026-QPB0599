@@ -333,10 +333,11 @@ Para: consultar la disponibilidad o formalizar alquileres de forma autónoma sin
 
 ## 5. Modelo conceptual
 
+![Modelado Conceptual](images/Modelado.jpg)
 
 ### 5.1. Diagramas de clases UML
 
-![Modelado Conceptual](images/Modelado.jpg)
+
 
 ### 5.2. Escenarios de prueba
 
