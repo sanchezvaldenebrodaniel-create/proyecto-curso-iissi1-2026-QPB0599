@@ -352,8 +352,6 @@ Cuando se realizó la revisión el vehículo llegó en peor estado del original,
 
 - Matriz de trazabilidad entre los elementos del modelo conceptual y los requisitos.
 
-Aquí tienes la tabla en formato Markdown para que puedas copiarla y pegarla fácilmente:
-
 | Requisito Funcional (RF) | Requisito General (RG) | Usuario / Rol | Requisitos de Información (RI) | Reglas de Negocio (RN) |
 | --- | --- | --- | --- | --- |
 | **RF - 001** Realizar una reserva | RG-01 | Cliente | RI-001, RI-003, RI-004, RI-005 | RN-001, RN-005, RN-006 |
