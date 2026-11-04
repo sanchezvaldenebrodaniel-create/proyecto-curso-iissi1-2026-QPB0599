@@ -342,10 +342,11 @@ Para: consultar la disponibilidad o formalizar alquileres de forma autónoma sin
 ### 5.2. Escenarios de prueba
 
 Un cliente cuyo nombre es Juan Pérez, su correo es juanperez@gmail.com (instancia de la subclase Cliente) efectúa la reserva de un vehículo de categoría SUV (Toyota RAV4, cuya matrícula es 9223 LMN y su estado era perfecto) la reserva la realizó para recoger el coche y devolverlo en la oficina central de Sevilla para el periodo comprendido entre el 10/11/2026 y el 15/11/2026.
+
 En la contratación, el cliente elige la modalidad de Seguro Básico (cumpliendo la restricción que exige al menos un seguro activo) y añade la opción extra de GPS. Contando con esta reserva es la quinta que realiza, entonces el sistema aplica automáticamente el descuento de oferta por fidelidad.
 Con estos datos se emite la Factura correspondiente. Una vez devuelto el vehículo al finalizar el contrato, el mecánico registra la Revisión lo que es obligatorio para verificar el estado del automóvil y el nivel de combustible final y compararlo con el inicial, que había antes que el cliente cogiese el coche, antes de poder habilitarlo para un nuevo cliente.
-Cuando se realizó la revisión el vehículo llegó en peor estado del original, es por ello que tras la revisión mecánica, se le asignó la factura correspondiente a su tipo de seguro. Por otro lado, el nivel de gasolina era notablemente inferior al de la entrega del vehículo. Por ello se aplicó  también una factura correspondiente a eso
 
+Cuando se realizó la revisión el vehículo llegó en peor estado del original, es por ello que tras la revisión mecánica, se le asignó la factura correspondiente a su tipo de seguro. Por otro lado, el nivel de gasolina era notablemente inferior al de la entrega del vehículo. Por ello se aplicó  también una factura correspondiente a eso
 
 ## 6. Matrices de trazabilidad
 
