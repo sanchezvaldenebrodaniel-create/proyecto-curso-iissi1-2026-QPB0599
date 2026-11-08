@@ -333,7 +333,7 @@ Para: consultar la disponibilidad o formalizar alquileres de forma autónoma sin
 
 ## 5. Modelo conceptual
 
-![Modelado Conceptual](images/ALQUILER DE COCHES.drawio.png)
+![Modelado Conceptual](images/ALQUILERDECOCHES.drawio.)
 
 ### 5.1. Diagramas de clases UML
 
