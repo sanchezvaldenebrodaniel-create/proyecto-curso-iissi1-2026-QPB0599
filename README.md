@@ -352,25 +352,35 @@ Cuando se realizó la revisión el vehículo llegó en peor estado del original,
 
 - Matriz de trazabilidad entre los elementos del modelo conceptual y los requisitos.
 
-| Requisito Funcional (RF) | Requisito General (RG) | Usuario / Rol | Requisitos de Información (RI) | Reglas de Negocio (RN) |
-| --- | --- | --- | --- | --- |
-| **RF - 001** Realizar una reserva | RG-01 | Cliente | RI-001, RI-003, RI-004, RI-005 | RN-001, RN-005, RN-006 |
-| **RF - 002** Cancelar una reserva | RG-01, RG-04 | Cliente | RI-004, RI-005, RI-006 | RN-004 |
-| **RF - 003** Cambiar el estado de un vehículo | RG-02 | Trabajador - Mecánico / Administrador | RI-003 | RN-001 |
-| **RF - 004** Inicio de sesión | RG-01 | Usuario (Cliente / Trabajador) | RI-001, RI-002 | — |
-| **RF - 005** Búsqueda filtrada | RG-01 | Cliente | RI-003 | RN-001 |
-| **RF - 006** Añadir extras | RG-01 | Cliente | RI-004 | — |
-| **RF - 007** Contratar seguro de la reserva | RG-01 | Cliente | RI-004 | RN-005 |
-| **RF - 008** Registrar devolución y nivel de combustible | RG-03, RG-04 | Trabajador - Administrador | RI-003, RI-004, RI-005, RI-006 | RN-002, RN-003 |
-| **RF - 009** Aplicar penalización por cancelación tardía | RG-04 | Trabajador - Administrador | RI-004, RI-005, RI-006 | RN-004 |
-| **RF - 010** Consultar vehículos pendientes de revisión | RG-02 | Trabajador - Mecánico | RI-003 | RN-001 |
-| **RF - 011** Consultar historial de reservas de un cliente | RG-01 | Cliente | RI-001, RI-004 | — |
-| **RF - 012** Consultar reservas activas del día | RG-02, RG-03 | Trabajador - Administrador | RI-004 | — |
-| **RF - 013** Consultar los vehículos más alquilados | RG-02 | Trabajador - Administrador | RI-003, RI-004 | — |
-| **RF - 014** Consultar listado de penalizaciones de un cliente | RG-04 | Trabajador - Administrador | RI-001, RI-005, RI-006 | RN-003, RN-004 |
-| **RF - 015** Consultar los clientes con mayor fidelidad | RG-01, RG-02 | Trabajador - Administrador | RI-001, RI-004 | — |
-| **RF - 016** Ingresos totales mensuales | RG-04 | Trabajador - Administrador | RI-005, RI-006 | — |
-| **RF - 017** Extras más demandados | RG-02 | Trabajador - Administrador | RI-004 | — |
+## 6. Matrices de trazabilidad
+
+- Matriz de trazabilidad entre los elementos del modelo conceptual y los requisitos.
+
+| Requisito / Regla | Ent. Cliente | Ent. Vehículo | Ent. Reserva | Ent. Oficina | Ent. Factura | Ent. Seguro | Ent. Extras | Ent. Mecánico | Ent. Revisión | Ent. Oferta | Asoc: realiza / cancela | Asoc: tiene (Reserva-Vehículo) | Asoc: tiene (Reserva-Oficina) | Asoc: tiene (Reserva-Seguro) | Asoc: tiene (Reserva-Extras) | Asoc: tiene (Reserva-Factura) | Asoc: tiene (Reserva-Oferta) | Asoc: tiene asig. (Vehículo-Revisión) | Asoc: tiene asig. (Mecánico-Revisión) | Restricciones (RN) |
+| :--- | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+| **RI - 001** | X | | | | | | | | | | | | | | | | | | | |
+| **RI - 002** | X | | | | | | | X | X | | | | | | | | | | | |
+| **RI - 003** | | X | | | | | | | | | | | | | | | | | | |
+| **RI - 004** | | | X | | | | | | | | | | | | | | | | | |
+| **RI - 005** | | | | | X | | | | | | | | | | | | | | | |
+| **RI - 006** | | | | | X | | | | | | | | | | | | | | | |
+| **RI - 007** | | | | | | | | | | X | | | | | | | | | | |
+| **RF - 001** | X | X | X | X | | | | | | | X | X | X | | | | | | | |
+| **RF - 002** | X | | X | | | | | | | | X | | | | | | | | | |
+| **RF - 003** | X | X | | | | | | X | X | | | | | | | | | | | X |
+| **RF - 004** | X | | | | | | | | | | | | | | | | | | | |
+| **RF - 005** | | X | | X | | | | | | | | | | | | | | | | |
+| **RF - 006** | | | X | | | | X | | | | | | | | X | | | | | |
+| **RF - 007** | | | X | | | X | | | | | | | | X | | | | | | X |
+| **RF - 008** | | X | X | | X | | | | | | | X | | | | X | | | | X |
+| **RF - 009** | | | X | | X | | | | | | X | | | | | X | | | | X |
+| **RF - 010** | | X | | | | | | X | X | | | | | | | | | X | X | |
+| **RN - 001** | | X | X | | | | | | | | | X | | | | | | | | X |
+| **RN - 002** | | | X | | | | | | | | | | | | | | | | | X |
+| **RN - 003** | | | X | | X | | | | | | | | | | | X | | | | X |
+| **RN - 004** | | | X | | X | | | | | | X | | | | | X | | | | X |
+| **RN - 005** | | | X | | | X | | | | | | | | X | | | | | | X |
+| **RN - 006** | X | | X | | | | | | | | X | | | | | | | | | X |
 
 -- fin entregable 2 --
 
