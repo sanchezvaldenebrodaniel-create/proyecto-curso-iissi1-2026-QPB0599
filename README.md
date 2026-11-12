@@ -360,6 +360,10 @@ Cuando se realizó la revisión el vehículo llegó en peor estado del original,
 
 - Matriz de trazabilidad entre los elementos del modelo conceptual y los requisitos.
 
+## 6. Matrices de trazabilidad
+
+- Matriz de trazabilidad entre los elementos del modelo conceptual y los requisitos.
+
 | Requisito / Regla | Ent. Cliente | Ent. Vehículo | Ent. Reserva | Ent. Oficina | Ent. Factura | Ent. Seguro | Ent. Extras | Ent. Mecánico | Ent. Revisión | Ent. Oferta | Asoc: realiza / cancela | Asoc: tiene (Reserva-Vehículo) | Asoc: tiene (Reserva-Oficina) | Asoc: tiene (Reserva-Seguro) | Asoc: tiene (Reserva-Extras) | Asoc: tiene (Reserva-Factura) | Asoc: tiene (Reserva-Oferta) | Asoc: tiene asig. (Vehículo-Revisión) | Asoc: tiene asig. (Mecánico-Revisión) | Restricciones (RN) |
 | :--- | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
 | **RI - 001** | X | | | | | | | | | | | | | | | | | | | |
@@ -371,7 +375,7 @@ Cuando se realizó la revisión el vehículo llegó en peor estado del original,
 | **RI - 007** | | | | | | | | | | X | | | | | | | | | | |
 | **RF - 001** | X | X | X | X | | | | | | | X | X | X | | | | | | | |
 | **RF - 002** | X | | X | | | | | | | | X | | | | | | | | | |
-| **RF - 003** | X | X | | | | | | X | X | | | | | | | | | | | X |
+| **RF - 003** | X | X | | | | | | X | X | | | | | | | | | | X |
 | **RF - 004** | X | | | | | | | | | | | | | | | | | | | |
 | **RF - 005** | | X | | X | | | | | | | | | | | | | | | | |
 | **RF - 006** | | | X | | | | X | | | | | | | | X | | | | | |
@@ -385,7 +389,8 @@ Cuando se realizó la revisión el vehículo llegó en peor estado del original,
 | **RN - 004** | | | X | | X | | | | | | X | | | | | X | | | | X |
 | **RN - 005** | | | X | | | X | | | | | | | | X | | | | | | X |
 | **RN - 006** | X | | X | | | | | | | | X | | | | | | | | | X |
-
+| **RN - 007** | X | | X | | | | | | | X | X | | | | | | X | | | X |
+| **RN - 008** | | X | X | | | | | X | X | | | X | | | | | | X | X | X |
 -- fin entregable 2 --
 
 ## 7. Modelo relacional en 3FN
