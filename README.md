@@ -238,6 +238,14 @@ Ninguna reserva podrá ser finalizada sin haber seleccionado uno de los dos tipo
 
 Los clientes deben tener una antigüedad mínima de carnet de un año  para poder conducir el vehículo.
 
+- RN - 007 Oferta de fidelidad
+
+La oferta de fidelidad se aplica cada 5 reservas de un mismo cliente.
+
+- RN - 008 Mantenimiento de los vehiculos
+
+Es obligatorio que cada vehículo pase una revisión después de cada cliente.
+
 #### 4.1.3. Pruebas de aceptación.
 
 - RN-001 Antigüedad mínima del carnet de conducir - Pruebas de aceptación.
