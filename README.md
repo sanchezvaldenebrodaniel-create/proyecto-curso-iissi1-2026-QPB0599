@@ -248,39 +248,53 @@ Es obligatorio que cada vehículo pase una revisión después de cada cliente.
 
 #### 4.1.3. Pruebas de aceptación.
 
-- RN-001 Antigüedad mínima del carnet de conducir - Pruebas de aceptación.
 
-La reserva se confirma con éxito si la fecha de expedición del carnet del cliente supera el año de antigüedad respecto a la fecha de recogida.
+- RN-001 Restricción de disponibilidad - Pruebas de aceptación
+El vehículo se asigna a la reserva con éxito si su estado actual es Disponible y no presenta solapamiento de fechas con ninguna reserva confirmada
+El vehículo no se puede reservar (ni aparece en los resultados de búsqueda) si su estado actual es En mantenimiento o Alquilado.
+El vehículo no se puede reservar si las fechas solicitadas coinciden total o parcialmente con otra reserva activa para la misma matrícula.
 
-La reserva no se crea si el carnet del cliente tiene menos de 1 año de antigüedad respecto a la fecha de recogida.
+- RN-002 Restricción de fecha - Pruebas de aceptación
+Si al registrar la devolución (check-out) la fecha y hora real de entrega es menor o igual a la fecha límite pactada en la reserva, el sistema cierra el alquiler con éxito sin incidencias ni cargos extra
+Si la fecha y hora real de devolución supera la fecha límite pactada en la reserva (t > fecha límite), el sistema detecta el incumplimiento de la fecha acordada y aplica automáticamente la penalización correspondiente (
+recargo del 20% del precio diario del vehículo por cada fracción de retraso) para poder cerrar la reserva.
 
-El cliente no se puede seleccionar ni registrar para la reserva si falta el dato de la fecha de expedición del carnet.
+- RN-003 Penalización de combustible - Pruebas de aceptación
+Si al registrar la devolución el nivel de combustible final es igual o mayor que enivel de combustible inicial registrado en la entrega, la reserva se cierra sin aplicar ningún cargo adicional por combustible.
+Si el nivel de combustible final es estrictamente menor que el nivel de combustible inicial, el sistema calcula y añade automáticamente un cargo adicional por repostaje al importe final del alquiler.
 
-- RN-002 Control de disponibilidad de vehículo por estado y fechas - Pruebas de aceptación.
+- RN-004 Penalización de cancelación - Pruebas de aceptación
+Si se solicita la cancelación de la reserva en una fecha y hora igual o anterior a la fecha límite establecida, el sistema cancela la reserva sin aplicar ningún cargo adicional.
+Si el sistema detecta que la cancelación se realiza posteriormente a la fecha límite pactada, calcula y aplica automáticamente el cargo adicional por cancelación fuera de plazo.
 
-El vehículo se asigna a la reserva si su estado es Disponible y no presenta solapamiento de fechas con ninguna reserva confirmada.
+- RN-005 Obligatoriedad de contratación de seguro - Pruebas de aceptación
+La reserva se finaliza y confirma correctamente cuando se ha seleccionado obligatoriamente una de las dos modalidades de seguro disponibles.
+El sistema impide finalizar la reserva y muestra un aviso de validación si no se ha seleccionado ninguno de los dos tipos de seguro.
+El sistema no permite seleccionar ambos seguros a la vez ni avanzar al cierre de la reserva con el campo de seguro vacío.
 
-El vehículo no se puede reservar si su estado actual es de mantenimiento o alquilado.
- 
-El vehículo no se puede reservar si coincide total o parcialmente en fechas con otra reserva activa para la misma matrícula.
+- RN-006 Restricción de antigüedad de carnet - Pruebas de aceptació
+La reserva se confirma con éxito si la fecha de expedición del carnet de conducir del cliente tiene una antigüedad igual o superior a 1 año respecto a la fecha de recogida del vehículo.
+La reserva no se crea y el sistema rechaza la operación si el carnet del cliente tiene menos de 1 año de antigüedad respecto a la fecha de recogida.
+El cliente no se puede seleccionar ni registrar para una reserva si falta el dato de la fecha de expedición de su carnet de conducir.
 
-- RN-003 Penalización por devolución tardía - Pruebas de aceptación.
+- RN-007 Oferta de fidelidad - Pruebas de aceptación
+Para un mismo cliente, las reservas 1, 2, 3 y 4 se facturan con la tarifa estándar sin aplicar ningún descuento de fidelidad.
+Al realizar la 5.ª reserva de ese mismo cliente (y en cada múltiplo de 5: 10.ª, 15.ª, etc.), el sistema detecta el acumulado y aplica automáticamente la oferta de fidelidad sobre el importe de la reserva.
+Las reservas que hayan sido canceladas no suman en el contador de 5 reservas para obtener la oferta de fidelidad.
 
-Si al procesar el check-out la hora real de devolución es menor o igual a la fecha/hora límite acordada, la reserva se cierra sin recargos por demora.
+- RN-008 Mantenimiento de los vehículos - Pruebas de aceptación
+Al registrar la devolución de un vehículo tras finalizar el servicio con un cliente, el sistema cambia automáticamente su estado a En mantenimiento / En revisión, bloqueando su asignación a nuevos clientes.
+Mientras el vehículo permanece en estado En mantenimiento / En revisión, no aparece disponible en el catálogo para nuevas reservas.
+Una vez que un mecánico o trabajador valida que el vehículo ha pasado la revisión y actualiza su estado a Disponible, el coche vuelve a aparecer como elegible para nuevas reservas.
 
-Si la hora real de devolución supera la hora límite pactada (t > límite), el sistema calcula y suma automáticamente un recargo del 20% del precio diario del coche por cada fracción de retraso.
 
-- RN-004 Cargo adicional por diferencia de combustible - Pruebas de aceptación.
 
-Si al registrar la devolución el nivel combustible final es igual o mayor que combustible inicial, no se aplica ningún cargo de combustible.
- 
-Si el nivel combustible final es estrictamente menor que combustible inicial, el sistema calcula y añade un recargo por repostaje al importe final del alquiler. 
 
-- RN-005 Incompatibilidad de reserva por estado de mantenimiento - Pruebas de aceptación.
 
-Si un trabajador o mecánico cambia el estado de un coche a Mantenimiento, el vehículo deja de aparecer automáticamente en los resultados de búsqueda de coches disponibles.
 
-Cuando un mecánico restaura el estado del coche a Disponible, el vehículo vuelve a estar elegible en el catálogo para nuevas reservas.
+
+
+
 
 ### 4.2. Mapa de historias de usuario (opcional).
 ### Mapas de historias de usuario.
