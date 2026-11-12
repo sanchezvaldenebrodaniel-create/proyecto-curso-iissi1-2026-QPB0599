@@ -391,6 +391,9 @@ Cuando se realizó la revisión el vehículo llegó en peor estado del original,
 | **RN - 006** | X | | X | | | | | | | | X | | | | | | | | | X |
 | **RN - 007** | X | | X | | | | | | | X | X | | | | | | X | | | X |
 | **RN - 008** | | X | X | | | | | X | X | | | X | | | | | | X | X | X |
+
+
+
 -- fin entregable 2 --
 
 ## 7. Modelo relacional en 3FN
