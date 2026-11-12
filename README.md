@@ -360,10 +360,6 @@ Cuando se realizó la revisión el vehículo llegó en peor estado del original,
 
 - Matriz de trazabilidad entre los elementos del modelo conceptual y los requisitos.
 
-## 6. Matrices de trazabilidad
-
-- Matriz de trazabilidad entre los elementos del modelo conceptual y los requisitos.
-
 | Requisito / Regla | Ent. Cliente | Ent. Vehículo | Ent. Reserva | Ent. Oficina | Ent. Factura | Ent. Seguro | Ent. Extras | Ent. Mecánico | Ent. Revisión | Ent. Oferta | Asoc: realiza / cancela | Asoc: tiene (Reserva-Vehículo) | Asoc: tiene (Reserva-Oficina) | Asoc: tiene (Reserva-Seguro) | Asoc: tiene (Reserva-Extras) | Asoc: tiene (Reserva-Factura) | Asoc: tiene (Reserva-Oferta) | Asoc: tiene asig. (Vehículo-Revisión) | Asoc: tiene asig. (Mecánico-Revisión) | Restricciones (RN) |
 | :--- | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
 | **RI - 001** | X | | | | | | | | | | | | | | | | | | | |
