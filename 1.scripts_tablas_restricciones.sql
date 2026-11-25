@@ -64,12 +64,16 @@ CREATE TABLE Seguros(
 	seguro_basico BOOLEAN ,
 	seguro_premium BOOLEAN,
 	precio DECIMAL (10,2)
+	
+	
 );
+
 
 CREATE TABLE Extra(
 	id INT PRIMARY KEY AUTO_INCREMENT,
 	tipo ENUM('GPS', 'sillita_bebe', 'conductor_extra')
 );
+
 
 CREATE TABLE Vehiculos(
 	id INT PRIMARY KEY AUTO_INCREMENT,
@@ -78,7 +82,9 @@ CREATE TABLE Vehiculos(
 	precio DECIMAL (10,2) NOT NULL,
 	marca VARCHAR(255) NOT NULL,
 	modelo VARCHAR(255) NOT NULL,
-	tipo_estado ENUM('en_mantenimiento', 'disponible', 'alquilado') NOT NULL	
+	tipo_estado ENUM('en_mantenimiento', 'disponible', 'alquilado') NOT NULL
+	 
+	
 );
 
 CREATE TABLE Revision(
@@ -109,7 +115,7 @@ CREATE TABLE Reservas(
 	vehiculoId INT NOT NULL,
 	seguroId INT NOT NULL,
 	oficinaId INT NOT NULL,
-	extraId INT NOT NULL,
+	extraId INT,
 	FOREIGN KEY (clienteRealizaId) REFERENCES clientes(id)
 		ON DELETE CASCADE 
 		ON UPDATE CASCADE,
@@ -128,25 +134,27 @@ CREATE TABLE Reservas(
 	FOREIGN KEY (extraId) REFERENCES extra(id)
 		ON DELETE CASCADE 
 		ON UPDATE CASCADE
+	
 );
 
 CREATE TABLE facturas(
 	id INT PRIMARY KEY AUTO_INCREMENT,
 	reservaId INT NOT NULL,
-	importe_total INT NOT NULL,
-	penalizacion_cancelacion DECIMAL(10,2),
-	penalizacion_combustible DECIMAL(10,2),
+	importe_total DECIMAL(10,2) NOT NULL DEFAULT 0.00,
+	penalizacion_cancelacion DECIMAL(10,2) DEFAULT 0.00,
+	penalizacion_combustible DECIMAL(10,2) DEFAULT 0.00,
 	FOREIGN KEY (reservaId) REFERENCES reservas(id)
 		ON DELETE CASCADE 
 		ON UPDATE CASCADE
+
 );
 
 CREATE TABLE ofertas(
 	id INT PRIMARY KEY AUTO_INCREMENT,
 	reservaId INT NOT NULL,
-	descuento_total INT,
-	oferta_mes INT,
-	oferta_fidelidad INT,
+	descuento_total INT DEFAULT 0,
+	oferta_mes INT DEFAULT 0,
+	oferta_fidelidad INT DEFAULT 0,
 	FOREIGN KEY (reservaId) REFERENCES reservas(id)
 		ON DELETE CASCADE 
 		ON UPDATE CASCADE
