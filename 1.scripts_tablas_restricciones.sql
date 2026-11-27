@@ -57,21 +57,22 @@ CREATE TABLE Oficinas(
 
 CREATE TABLE Seguros(
 	id INT PRIMARY KEY AUTO_INCREMENT,
-	seguro_basico BOOLEAN ,
+	seguro_basico BOOLEAN,
 	seguro_premium BOOLEAN,
-	precio DECIMAL (10,2)	
+	precio DECIMAL (10,2) NOT NULL CHECK (precio >= 0)	
 );
 
 CREATE TABLE Extra(
 	id INT PRIMARY KEY AUTO_INCREMENT,
-	tipo ENUM('GPS', 'sillita_bebe', 'conductor_extra')
+	tipo ENUM('GPS', 'sillita_bebe', 'conductor_extra'),
+	precio_extra DECIMAL(10,2) NOT NULL CHECK (precio_extra >= 0.00)
 );
 
 CREATE TABLE Vehiculos(
 	id INT PRIMARY KEY AUTO_INCREMENT,
 	matricula VARCHAR(255) UNIQUE NOT NULL,
 	tipo_vehiculo ENUM('economico', 'SUV', 'furgoneta', 'automatico') NOT NULL,
-	precio DECIMAL (10,2) NOT NULL,
+	precio_dia DECIMAL (10,2) NOT NULL CHECK (precio_dia >= 0),
 	marca VARCHAR(255) NOT NULL,
 	modelo VARCHAR(255) NOT NULL,
 	tipo_estado ENUM('en_mantenimiento', 'disponible', 'alquilado') NOT NULL	
@@ -98,6 +99,8 @@ CREATE TABLE Reservas(
 	fecha_devolucion DATE NOT NULL,
 	fecha_devolucion_real DATE,
 	estado ENUM('activa', 'finalizada', 'cancelada') NOT NULL DEFAULT 'activa',
+	dias_totales INT AS (DATEDIFF(fecha_devolucion, fecha_recogida)),
+	precio_total DECIMAL(10,2) NOT NULL DEFAULT 0.00,
 	combustible_inicial INT NOT NULL,
 	combustible_final INT,
 	fecha_limite DATE NOT NULL,
@@ -105,9 +108,11 @@ CREATE TABLE Reservas(
 	clienteRealizaId INT NOT NULL,
 	clienteCancelaId INT,
 	vehiculoId INT NOT NULL,
-	seguroId INT,
-	oficinaId INT NOT NULL,
+	seguroId INT NOT NULL,
+	oficinaRecogidaId INT NOT NULL,
+	oficinaDevolucionId INT NOT NULL,
 	extraId INT,
+	CONSTRAINT fechas_reserva CHECK (fecha_devolucion >= fecha_recogida),
 	FOREIGN KEY (clienteRealizaId) REFERENCES clientes(id)
 		ON DELETE CASCADE 
 		ON UPDATE CASCADE,
@@ -120,8 +125,11 @@ CREATE TABLE Reservas(
 	FOREIGN KEY (seguroId) REFERENCES seguros(id)
 		ON DELETE CASCADE 
 		ON UPDATE CASCADE,
-	FOREIGN KEY (oficinaId) REFERENCES oficinas(id)
+	FOREIGN KEY (oficinaRecogidaId) REFERENCES oficinas(id)
 		ON DELETE CASCADE 
+		ON UPDATE CASCADE,
+	FOREIGN KEY (oficinaDevolucionId) REFERENCES oficinas(id)
+		ON DELETE CASCADE
 		ON UPDATE CASCADE,
 	FOREIGN KEY (extraId) REFERENCES extra(id)
 		ON DELETE CASCADE 
@@ -142,9 +150,9 @@ CREATE TABLE facturas(
 CREATE TABLE ofertas(
 	id INT PRIMARY KEY AUTO_INCREMENT,
 	reservaId INT NOT NULL,
-	descuento_total INT DEFAULT 0,
-	oferta_mes INT DEFAULT 0,
-	oferta_fidelidad INT DEFAULT 0,
+	descuento_total DECIMAL(10,2) DEFAULT 0.00,
+	oferta_mes DECIMAL(10,2) DEFAULT 0.00,
+	oferta_fidelidad DECIMAL(10,2) DEFAULT 0.00,
 	FOREIGN KEY (reservaId) REFERENCES reservas(id)
 		ON DELETE CASCADE 
 		ON UPDATE CASCADE
