@@ -228,7 +228,7 @@ Si un cliente entrega el coche con menos combustible que la cantidad de combusti
 
 - RN - 004 Penalización de cancelación.
 
-Si el sistema detecta que la cancelación de la reserva ha sido realizada posteriormente a la fecha límite, se aplicará un cargo adicional automáticamente.
+Si el sistema detecta que la cancelación de la reserva ha sido realizada posteriormente a la fecha límite, se aplicará un cargo adicional automáticamente de 50.00€.
 
 - RN - 005 Obligatoriedad de contratación de seguro.
 
@@ -265,7 +265,7 @@ Si el nivel de combustible final es estrictamente menor que el nivel de combusti
 
 - RN-004 Penalización de cancelación - Pruebas de aceptación
 Si se solicita la cancelación de la reserva en una fecha y hora igual o anterior a la fecha límite establecida, el sistema cancela la reserva sin aplicar ningún cargo adicional.
-Si el sistema detecta que la cancelación se realiza posteriormente a la fecha límite pactada, calcula y aplica automáticamente el cargo adicional por cancelación fuera de plazo.
+Si el sistema detecta que la cancelación se realiza posteriormente a la fecha límite pactada, aplica automáticamente el cargo adicional por cancelación fuera de plazo.
 
 - RN-005 Obligatoriedad de contratación de seguro - Pruebas de aceptación
 La reserva se finaliza y confirma correctamente cuando se ha seleccionado obligatoriamente una de las dos modalidades de seguro disponibles.
