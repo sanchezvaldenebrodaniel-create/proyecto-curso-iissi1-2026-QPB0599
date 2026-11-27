@@ -97,7 +97,7 @@ CREATE TABLE Reservas(
 	fecha_recogida DATE NOT NULL,
 	fecha_devolucion DATE NOT NULL,
 	fecha_devolucion_real DATE,
-	estado ENUM('activa', 'finalizada', 'cancelada' NOT NULL DEFAULT 'acctiva',
+	estado ENUM('activa', 'finalizada', 'cancelada') NOT NULL DEFAULT 'activa',
 	combustible_inicial INT NOT NULL,
 	combustible_final INT,
 	fecha_limite DATE NOT NULL,
