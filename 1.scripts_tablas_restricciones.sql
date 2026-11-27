@@ -18,7 +18,6 @@ CREATE TABLE Usuarios(
 	contraseña VARCHAR(255) NOT NULL
 );
 
-
 CREATE TABLE Clientes(
 	id INT PRIMARY KEY AUTO_INCREMENT,
 	DNI VARCHAR(255) UNIQUE NOT NULL,
@@ -30,15 +29,13 @@ CREATE TABLE Clientes(
 		ON UPDATE CASCADE
 );
 
-
 CREATE TABLE Administradores(
 	id INT PRIMARY KEY AUTO_INCREMENT,
 	id_trabajador INT NOT NULL UNIQUE,
 	UsuarioId INT NOT NULL,
 	FOREIGN KEY (UsuarioId) REFERENCES Usuarios(id) 
 		ON DELETE CASCADE 
-		ON UPDATE CASCADE
-		
+		ON UPDATE CASCADE	
 );
 
 CREATE TABLE Mecanicos(
@@ -49,7 +46,6 @@ CREATE TABLE Mecanicos(
 		ON DELETE CASCADE 
 		ON UPDATE CASCADE
 );
-
 
 CREATE TABLE Oficinas(
 	id INT PRIMARY KEY AUTO_INCREMENT,
@@ -63,17 +59,13 @@ CREATE TABLE Seguros(
 	id INT PRIMARY KEY AUTO_INCREMENT,
 	seguro_basico BOOLEAN ,
 	seguro_premium BOOLEAN,
-	precio DECIMAL (10,2)
-	
-	
+	precio DECIMAL (10,2)	
 );
-
 
 CREATE TABLE Extra(
 	id INT PRIMARY KEY AUTO_INCREMENT,
 	tipo ENUM('GPS', 'sillita_bebe', 'conductor_extra')
 );
-
 
 CREATE TABLE Vehiculos(
 	id INT PRIMARY KEY AUTO_INCREMENT,
@@ -82,9 +74,7 @@ CREATE TABLE Vehiculos(
 	precio DECIMAL (10,2) NOT NULL,
 	marca VARCHAR(255) NOT NULL,
 	modelo VARCHAR(255) NOT NULL,
-	tipo_estado ENUM('en_mantenimiento', 'disponible', 'alquilado') NOT NULL
-	 
-	
+	tipo_estado ENUM('en_mantenimiento', 'disponible', 'alquilado') NOT NULL	
 );
 
 CREATE TABLE Revision(
@@ -106,14 +96,16 @@ CREATE TABLE Reservas(
 	id INT PRIMARY KEY AUTO_INCREMENT,
 	fecha_recogida DATE NOT NULL,
 	fecha_devolucion DATE NOT NULL,
+	fecha_devolucion_real DATE,
+	estado ENUM('activa', 'finalizada', 'cancelada' NOT NULL DEFAULT 'acctiva',
 	combustible_inicial INT NOT NULL,
-	combustible_final INT NOT NULL,
+	combustible_final INT,
 	fecha_limite DATE NOT NULL,
 	numero_reserva INT UNIQUE NOT NULL,
 	clienteRealizaId INT NOT NULL,
-	clienteCancelaId INT NOT NULL,
+	clienteCancelaId INT,
 	vehiculoId INT NOT NULL,
-	seguroId INT NOT NULL,
+	seguroId INT,
 	oficinaId INT NOT NULL,
 	extraId INT,
 	FOREIGN KEY (clienteRealizaId) REFERENCES clientes(id)
@@ -134,7 +126,6 @@ CREATE TABLE Reservas(
 	FOREIGN KEY (extraId) REFERENCES extra(id)
 		ON DELETE CASCADE 
 		ON UPDATE CASCADE
-	
 );
 
 CREATE TABLE facturas(
@@ -146,7 +137,6 @@ CREATE TABLE facturas(
 	FOREIGN KEY (reservaId) REFERENCES reservas(id)
 		ON DELETE CASCADE 
 		ON UPDATE CASCADE
-
 );
 
 CREATE TABLE ofertas(
