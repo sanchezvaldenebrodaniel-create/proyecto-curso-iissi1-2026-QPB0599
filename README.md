@@ -359,7 +359,7 @@ Para: consultar la disponibilidad o formalizar alquileres de forma autónoma sin
 
 ### 5.1. Diagramas de clases UML
 
-![Modelado UML](images/Diagrama.jpeg)
+![Modelado UML](images/Diagrama_final.jpeg)
 
 ### 5.2. Escenarios de prueba
 
